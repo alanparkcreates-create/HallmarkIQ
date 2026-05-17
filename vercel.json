@@ -1,0 +1,8 @@
+{
+  "buildCommand": "vite build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    { "source": "/analyze", "destination": "/api/analyze" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ]
+}

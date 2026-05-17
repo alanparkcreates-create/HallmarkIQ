@@ -1,0 +1,22 @@
+{
+  "name": "hallmarkiq",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"node server.js\" --names \"client,server\" --prefix-colors \"yellow,cyan\"",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "node server.js",
+    "client": "vite"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "openai": "^4.68.0"
+  },
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
+}
