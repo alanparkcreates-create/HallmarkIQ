@@ -869,17 +869,25 @@ async function init() {
   supabase.auth.onAuthStateChange(async (event, session) => {
     if (event === 'INITIAL_SESSION') {
       if (session) {
-        const me = await getMe();
-        state.user = me;
-        if (paymentStatus === 'success') toast('Subscription activated! Enjoy unlimited scans.', 'success');
-        navigate(me ? 'home' : 'login');
+        try {
+          const me = await getMe();
+          state.user = me;
+          if (paymentStatus === 'success') toast('Subscription activated! Enjoy unlimited scans.', 'success');
+          navigate(me ? 'home' : 'login');
+        } catch {
+          navigate('login');
+        }
       } else {
         navigate('login');
       }
     } else if (event === 'SIGNED_IN' && state.screen === 'login') {
-      const me = await getMe();
-      state.user = me;
-      navigate(me ? 'home' : 'login');
+      try {
+        const me = await getMe();
+        state.user = me;
+        navigate(me ? 'home' : 'login');
+      } catch {
+        navigate('login');
+      }
     } else if (event === 'SIGNED_OUT') {
       state.user = null;
       navigate('login');
