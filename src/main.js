@@ -168,7 +168,9 @@ function screenLogin() {
         <div class="login-body">
           <div class="gold-line"></div>
           <h2 class="login-title">Identify your<br><em>jewelry instantly</em></h2>
-          <p class="login-desc">Sign in to start scanning. Identify hallmarks, metal content, era, and estimated value using AI.</p>
+          <p class="login-desc">Identify hallmarks, metal content, era, and estimated value using AI. Free to start — no credit card required.</p>
+
+          <p class="login-or">Log in or create an account</p>
 
           <button class="google-btn" id="google-btn">
             <svg width="20" height="20" viewBox="0 0 48 48" style="flex-shrink:0">
