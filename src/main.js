@@ -860,6 +860,9 @@ function formatDate(iso) {
 //  INIT — check Supabase session → login
 // ══════════════════════════════════════════════
 async function init() {
+  // Render immediately so there's never a blank screen
+  navigate('login');
+
   const params = new URLSearchParams(window.location.search);
   const paymentStatus = params.get('payment');
   if (paymentStatus) {
