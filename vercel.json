@@ -2,7 +2,9 @@
   "buildCommand": "vite build",
   "outputDirectory": "dist",
   "rewrites": [
-    { "source": "/analyze", "destination": "/api/analyze" },
-    { "source": "/((?!api/).*)", "destination": "/index.html" }
+    { "source": "/auth/:path*",    "destination": "/api/index" },
+    { "source": "/billing/:path*", "destination": "/api/index" },
+    { "source": "/analyze",        "destination": "/api/index" },
+    { "source": "/((?!api/).*)",   "destination": "/index.html" }
   ]
 }

@@ -1253,6 +1253,170 @@ a      { color: var(--gold); text-decoration: none; }
 }
 .cam-flip-btn:active { background: var(--bg-card); color: var(--text); transform: rotate(180deg); }
 
+/* ── Login / Auth Screens ── */
+.login-screen {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0;
+  padding-bottom: 0 !important;
+}
+
+.login-top {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 72px 32px 48px;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.login-wordmark {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+  margin-bottom: 6px;
+}
+
+.login-tagline {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-sec);
+}
+
+.login-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 28px 32px;
+  gap: 12px;
+}
+
+.login-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 26px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.login-desc {
+  font-size: 14px;
+  color: var(--text-sec);
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.google-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  padding: 16px 24px;
+  background: #ffffff;
+  color: #1a1a1a;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
+  margin-top: 8px;
+}
+.google-btn:active  { opacity: 0.85; transform: scale(0.98); }
+.google-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+.login-footer {
+  margin-top: auto;
+  padding-top: 24px;
+  font-size: 12px;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.6;
+}
+
+/* Email-sent confirmation screen */
+.email-sent-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  padding: 48px 32px;
+  text-align: center;
+  padding-bottom: 0 !important;
+}
+
+.email-sent-icon {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  background: var(--gold-muted);
+  border: 1px solid var(--border-gold);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  margin-bottom: 28px;
+}
+
+.email-sent-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.email-sent-desc {
+  font-size: 14px;
+  color: var(--text-sec);
+  line-height: 1.7;
+  max-width: 280px;
+}
+
+.email-sent-note {
+  margin-top: 32px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* Auth-verify spinner screen */
+.auth-verify-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  gap: 20px;
+  padding-bottom: 0 !important;
+}
+
+.auth-verify-spinner {
+  width: 40px;
+  height: 40px;
+  border: 2px solid var(--border-gold);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.auth-verify-text {
+  font-size: 14px;
+  color: var(--text-sec);
+  letter-spacing: 0.05em;
+}
+
 /* ── Desktop adjustments ── */
 @media (min-width: 480px) {
   #app {

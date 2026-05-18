@@ -5,7 +5,9 @@ export default defineConfig({
     port: parseInt(process.env.PORT) || 5173,
     host: true,
     proxy: {
-      '/analyze': 'http://localhost:3001',
+      '/analyze':  'http://localhost:3001',
+      '/auth':     'http://localhost:3001',
+      '/billing':  'http://localhost:3001',
     },
   },
 });
